@@ -236,6 +236,7 @@ class _InternationalPhoneNumberInputState
                   radius: widget.phoneConfig.radius,
                   isUnderline: false,
                   textInputType: TextInputType.number,
+                  validator: widget.validator,
                   expands: true,
                   autoFocus: widget.phoneConfig.autoFocus,
                   inputFormatters: [

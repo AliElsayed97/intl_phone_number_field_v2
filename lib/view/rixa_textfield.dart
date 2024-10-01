@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../intl_phone_number_field.dart';
+
 class RixaTextField extends StatelessWidget {
   final String hintText;
   final String? labelText;
@@ -31,7 +33,7 @@ class RixaTextField extends StatelessWidget {
   final InputBorder? errorBorder;
   final TextStyle? errorStyle;
   final String? errorText;
-  final String? Function(String?)? validator;
+  final String? Function(IntPhoneNumber number)? validator;
   final TextStyle? floatingLabelStyle;
   final TextInputAction textInputAction;
   RixaTextField({
