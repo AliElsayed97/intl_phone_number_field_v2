@@ -115,56 +115,52 @@ class RixaTextField extends StatelessWidget {
                 : InputBorder.none;
   @override
   Widget build(BuildContext context) {
-    return
-        // Container(
-        // width: width,
-        // decoration: decoration ??
-        //     BoxDecoration(
-        //         color: backgroundColor,
-        //         borderRadius: BorderRadius.circular(radius)),
-        // padding: padding,
-        // child:
-        TextFormField(
-      controller: controller,
-      validator: validator,
-      maxLines: !expands ? maxLines : null,
-      minLines: minLines,
-      expands: expands,
-      autofocus: autoFocus,
-      showCursor: showCursor,
-      textInputAction: TextInputAction.done,
-      focusNode: focusNode,
-      style: textStyle?.copyWith(decoration: TextDecoration.none),
-      scrollPadding: EdgeInsets.zero,
-      textAlignVertical: TextAlignVertical.center,
-      keyboardType: textInputType,
-      autocorrect: false,
-      enableSuggestions: false,
-      inputFormatters: inputFormatters,
-      decoration: InputDecoration(
-          filled: true,
-          fillColor: backgroundColor,
-          border: const OutlineInputBorder(),
-          hintText: hintText,
-          contentPadding: innerPadding,
-          hintStyle: hintStyle,
-          enabledBorder: enabledBorder,
-          focusedBorder: focusedBorder,
-          labelText: labelText,
-          labelStyle: labelStyle,
-          errorMaxLines: errorMaxLines,
-          focusedErrorBorder: errorBorder,
-          errorBorder: errorBorder,
-          errorText: errorText,
-          errorStyle: errorStyle,
-          suffixIcon: suffixIcon,
-          prefixIcon: prefixIcon,
-          floatingLabelStyle: floatingLabelStyle),
-      onChanged: (text) {
-        if (onChanged != null) onChanged!(text);
-      },
+    return Container(
+      width: width,
+      decoration: decoration ??
+          BoxDecoration(
+              color: backgroundColor,
+              borderRadius: BorderRadius.circular(radius)),
+      padding: padding,
+      child: TextFormField(
+        controller: controller,
+        validator: validator,
+        maxLines: !expands ? maxLines : null,
+        minLines: minLines,
+        expands: expands,
+        autofocus: autoFocus,
+        showCursor: showCursor,
+        textInputAction: TextInputAction.done,
+        focusNode: focusNode,
+        style: textStyle?.copyWith(decoration: TextDecoration.none),
+        scrollPadding: EdgeInsets.zero,
+        textAlignVertical: TextAlignVertical.center,
+        keyboardType: textInputType,
+        autocorrect: false,
+        enableSuggestions: false,
+        inputFormatters: inputFormatters,
+        decoration: InputDecoration(
+            border: const OutlineInputBorder(),
+            hintText: hintText,
+            contentPadding: innerPadding,
+            hintStyle: hintStyle,
+            enabledBorder: enabledBorder,
+            focusedBorder: focusedBorder,
+            labelText: labelText,
+            labelStyle: labelStyle,
+            errorMaxLines: errorMaxLines,
+            focusedErrorBorder: errorBorder,
+            errorBorder: errorBorder,
+            errorText: errorText,
+            errorStyle: errorStyle,
+            suffixIcon: suffixIcon,
+            prefixIcon: prefixIcon,
+            floatingLabelStyle: floatingLabelStyle),
+        onChanged: (text) {
+          if (onChanged != null) onChanged!(text);
+        },
+      ),
     );
-    // );
   }
 }
 
