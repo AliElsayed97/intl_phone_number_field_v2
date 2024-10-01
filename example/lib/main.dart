@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 60,
                   controller: controller,
                   inputFormatters: const [],
-                  formatter: MaskedInputFormatter('### ### ## ##'),
+                  // formatter: MaskedInputFormatter('### ### ## ##'),
                   initCountry: CountryCodeModel(
                       name: "United States", dial_code: "+1", code: "US"),
                   betweenPadding: 23,
@@ -118,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           fontSize: 16,
                           fontWeight: FontWeight.w600)),
                   validator: (number) {
-                    if (number.number.isEmpty) {
+                    if (number == null || number.isEmpty) {
                       return "The phone number cannot be left emptyssss";
                     }
                     return null;

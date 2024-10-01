@@ -38,7 +38,7 @@ class InternationalPhoneNumberInput extends StatefulWidget {
   final MaskedInputFormatter? formatter;
   final List<TextInputFormatter> inputFormatters;
   final Future<String?> Function()? loadFromJson;
-  final String? Function(IntPhoneNumber number)? validator;
+  final String? Function(String? number)? validator;
   InternationalPhoneNumberInput(
       {super.key,
       TextEditingController? controller,
@@ -87,10 +87,13 @@ class _InternationalPhoneNumberInputState
     node = widget.phoneConfig.focusNode ?? FocusNode();
     if (widget.phoneConfig.autovalidateMode == AutovalidateMode.always &&
         widget.validator != null) {
-      String? error = widget.validator!(IntPhoneNumber(
-          code: selected.code,
-          dial_code: selected.dial_code,
-          number: widget.controller.text.trimLeft().trimRight()));
+      String? error = widget.validator!(
+        widget.controller.text.trim(),
+        // IntPhoneNumber(
+        // code: selected.code,
+        // dial_code: selected.dial_code,
+        // number: widget.controller.text.trimLeft().trimRight())
+      );
       if (errorText != error) {
         errorText = error;
       }
@@ -108,10 +111,13 @@ class _InternationalPhoneNumberInputState
           number: widget.controller.text.trimLeft().trimRight()));
     }
     if (widget.validator != null) {
-      String? error = widget.validator!(IntPhoneNumber(
-          code: selected.code,
-          dial_code: selected.dial_code,
-          number: widget.controller.text.trimLeft().trimRight()));
+      String? error = widget.validator!(
+        widget.controller.text.trim(),
+        // IntPhoneNumber(
+        // code: selected.code,
+        // dial_code: selected.dial_code,
+        // number: widget.controller.text.trimLeft().trimRight())
+      );
       if (errorText != error) {
         setState(() {
           errorText = error;
@@ -132,10 +138,13 @@ class _InternationalPhoneNumberInputState
         widget.phoneConfig.autovalidateMode ==
             AutovalidateMode.onUserInteraction &&
         widget.validator != null) {
-      String? error = widget.validator!(IntPhoneNumber(
-          code: selected.code,
-          dial_code: selected.dial_code,
-          number: widget.controller.text.trimLeft().trimRight()));
+      String? error = widget.validator!(
+        widget.controller.text.trim(),
+        // IntPhoneNumber(
+        // code: selected.code,
+        // dial_code: selected.dial_code,
+        // number: widget.controller.text.trimLeft().trimRight())
+      );
       if (errorText != error) {
         errorText = error;
         if (mounted) setState(() {});

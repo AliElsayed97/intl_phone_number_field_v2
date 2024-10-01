@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../intl_phone_number_field.dart';
-
 class RixaTextField extends StatelessWidget {
   final String hintText;
   final String? labelText;
@@ -33,7 +31,7 @@ class RixaTextField extends StatelessWidget {
   final InputBorder? errorBorder;
   final TextStyle? errorStyle;
   final String? errorText;
-  final String? Function(IntPhoneNumber number)? validator;
+  final String? Function(String?)? validator;
   final TextStyle? floatingLabelStyle;
   final TextInputAction textInputAction;
   RixaTextField({
@@ -124,8 +122,9 @@ class RixaTextField extends StatelessWidget {
               color: backgroundColor,
               borderRadius: BorderRadius.circular(radius)),
       padding: padding,
-      child: TextField(
+      child: TextFormField(
         controller: controller,
+        validator: validator,
         maxLines: !expands ? maxLines : null,
         minLines: minLines,
         expands: expands,
