@@ -258,6 +258,7 @@ class _InternationalPhoneNumberInputState
                   enabledColor: errorText != null
                       ? widget.phoneConfig.errorColor
                       : widget.phoneConfig.enabledColor,
+                  cursorColor: widget.phoneConfig.cursorColor,
                   showCursor: widget.phoneConfig.showCursor,
                   borderWidth: widget.phoneConfig.borderWidth,
                 )),

@@ -7,6 +7,7 @@ class PhoneConfig {
   int? errorTextMaxLength;
   Decoration? decoration;
   Color? backgroundColor;
+  Color? cursorColor;
   String? hintText;
   bool autoFocus, showCursor;
   FocusNode? focusNode;
@@ -33,6 +34,7 @@ class PhoneConfig {
       this.popUpErrorText = true,
       this.autoFocus = false,
       this.showCursor = false,
+      this.cursorColor,
       this.errorColor = const Color(0xFFFF5494),
       this.errorStyle = const TextStyle(color: Color(0xFFFF5494), fontSize: 12),
       this.floatingLabelStyle,
