@@ -15,6 +15,7 @@ class RixaTextField extends StatelessWidget {
   final Color? enabledColor, errorColor;
   final Color? cursorColor;
   final bool showCursor;
+  final bool? disablePhoneTextField;
   final double? width;
   final Color? focusedColor, backgroundColor;
   final dynamic Function(String)? onChanged;
@@ -56,6 +57,7 @@ class RixaTextField extends StatelessWidget {
     this.focusedColor,
     this.cursorColor,
     this.showCursor = true,
+    this.disablePhoneTextField,
     this.labelText,
     this.inputFormatters = const [],
     this.autoFocus = false,
@@ -133,6 +135,7 @@ class RixaTextField extends StatelessWidget {
         autofocus: autoFocus,
         showCursor: showCursor,
         cursorColor: cursorColor ?? Colors.black,
+        readOnly: disablePhoneTextField ?? false,
         textInputAction: TextInputAction.done,
         focusNode: focusNode,
         style: textStyle?.copyWith(decoration: TextDecoration.none),

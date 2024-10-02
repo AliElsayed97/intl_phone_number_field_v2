@@ -10,6 +10,7 @@ class PhoneConfig {
   Color? cursorColor;
   String? hintText;
   bool autoFocus, showCursor;
+  bool? disablePhoneTextField;
   FocusNode? focusNode;
   TextStyle? errorStyle, labelStyle;
   String? labelText, errorText;
@@ -33,6 +34,7 @@ class PhoneConfig {
       this.focusNode,
       this.popUpErrorText = true,
       this.autoFocus = false,
+      this.disablePhoneTextField,
       this.showCursor = false,
       this.cursorColor,
       this.errorColor = const Color(0xFFFF5494),

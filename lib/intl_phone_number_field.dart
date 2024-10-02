@@ -246,6 +246,8 @@ class _InternationalPhoneNumberInputState
                   isUnderline: false,
                   textInputType: TextInputType.number,
                   validator: widget.validator,
+                  disablePhoneTextField:
+                      widget.phoneConfig.disablePhoneTextField,
                   expands: true,
                   autoFocus: widget.phoneConfig.autoFocus,
                   inputFormatters: [
