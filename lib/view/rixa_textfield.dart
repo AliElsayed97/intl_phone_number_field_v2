@@ -151,10 +151,9 @@ class RixaTextField extends StatelessWidget {
             errorMaxLines: 1,
             focusedErrorBorder: errorBorder,
             errorBorder: errorBorder,
-            errorText: '',
-            // errorText: errorText,
+            errorText: errorText,
             errorStyle: const TextStyle(
-                color: Colors.transparent, fontSize: 0, height: 0),
+                color: Colors.transparent, fontSize: 0, height: 0.01),
             // errorStyle: errorStyle,
             suffixIcon: suffixIcon,
             prefixIcon: prefixIcon,
